@@ -1,6 +1,9 @@
 {
   "pages":[
     "pages/index/index",
+    "pages/recommend/recommend",
+    "pages/fm/fm",
+    "pages/songList/songList",
     "pages/logs/logs"
   ],
   "window":{

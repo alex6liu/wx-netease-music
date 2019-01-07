@@ -1,5 +1,16 @@
 <!--index.wxml-->
 <view class="container">
+  <view class="header-bar">
+    <block>
+      <text class="fm" bindtap='bindFmPage'>FM电台</text>
+    </block>
+    <block>
+      <text class="sl" bindtap='bindSlPage'>歌单</text>
+    </block>
+    <block>
+      <text class="recommend" bindtap='bindRecommend'>推荐</text>
+    </block>
+  </view>
   <view class="search">
     <input placeholder="musci name" bindinput="bindSearchInput"/>
     <view class="btn-area">
@@ -8,7 +19,7 @@
   </view>
   <view class="search-result-container">
     <block wx:for="{{responseData}}" wx:for-item="music">
-      <text class="music-item">{{index + 1}}. {{music.name}}</text>
+      <text class="music-item">{{music.name}}</text>
     </block>
   </view>
 </view>

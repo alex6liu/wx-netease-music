@@ -34,6 +34,6 @@ App({
     })
   },
   globalData: {
-    searchUrl: 'https://netease-music-api.herokuapp.com/search?',
+    
   }
 })

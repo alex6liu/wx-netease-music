@@ -1,11 +1,27 @@
 //index.js
 //获取应用实例
 const app = getApp()
+var baseUrl = require('../../utils/baseUrl.js')
 
 Page({
   data: {
     inputValue: '',
     responseData: {}
+  },
+  bindFmPage() {
+    wx.navigateTo({
+      url: '../fm/fm'
+    })
+  },
+  bindRecommend() {
+    wx.navigateTo({
+      url: '../recommend/recommend'
+    })
+  },
+  bindSlPage() {
+    wx.navigateTo({
+      url: '../songList/songList'
+    })
   },
   bindSearchInput(e) {
     this.setData({
@@ -15,7 +31,7 @@ Page({
   bindSearchButton() {
     var myThis = this;
     wx.request({
-      url: app.globalData.searchUrl,
+      url: baseUrl,
       data: {
         keywords: this.data.inputValue
       },
