@@ -1,0 +1,14 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="search">
+    <input placeholder="musci name" bindinput="bindSearchInput"/>
+    <view class="btn-area">
+      <button bindtap="bindSearchButton">搜索</button>
+    </view>
+  </view>
+  <view class="search-result-container">
+    <block wx:for="{{responseData}}" wx:for-item="music">
+      <text class="music-item">{{index + 1}}. {{music.name}}</text>
+    </block>
+  </view>
+</view>
