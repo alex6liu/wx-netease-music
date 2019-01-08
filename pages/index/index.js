@@ -18,9 +18,14 @@ Page({
       url: '../recommend/recommend'
     })
   },
-  bindSlPage() {
+  bindPlaylist() {
     wx.navigateTo({
       url: '../songList/songList'
+    })
+  },
+  bindBoardPage() {
+    wx.navigateTo({
+      url: '../board/board'
     })
   },
   bindSearchInput(e) {

@@ -1,25 +1,45 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="header-bar">
-    <block>
-      <text class="fm" bindtap='bindFmPage'>FM电台</text>
-    </block>
-    <block>
-      <text class="sl" bindtap='bindSlPage'>歌单</text>
-    </block>
-    <block>
-      <text class="recommend" bindtap='bindRecommend'>推荐</text>
-    </block>
+  <view class="header">
+    <image src="../../assets/icon/mic.png" class="mic"></image>
+    <view class="search">
+      <icon type="search" size="15"></icon>
+      <input placeholder="musci name" bindinput="bindSearchInput"/>
+    </view>
+    <image src="../../assets/icon/musiclist.png" class="musiclist"></image>
   </view>
-  <view class="search">
-    <input placeholder="musci name" bindinput="bindSearchInput"/>
-    <view class="btn-area">
-      <button bindtap="bindSearchButton">搜索</button>
+
+  <view class="index-category">
+    <view class="category-container">
+      <view class="image-container">
+        <image src="../../assets/icon/fm.png" class="fm"></image>
+      </view>
+      <text class="fm-text" bindtap='bindFmPage'>私人FM</text>
+    </view>
+    <view class="category-container">
+      <view class="image-container">
+        <image src="../../assets/icon/recommend.png" class="recommend"></image>
+      </view>
+      <text class="recommend-text" bindtap='bindRecommend'>每日推荐</text>
+    </view>
+    <view class="category-container">
+      <view class="image-container">
+        <image src="../../assets/icon/playlist.png" class="playlist"></image>
+      </view>
+      <text class="playlist-text" bindtap='bindPlaylist'>歌单</text>
+    </view>
+    <view class="category-container">
+      <view class="image-container">
+        <image src="../../assets/icon/board.png" class="board"></image>
+      </view>
+      <text class="board-text" bindtap='bindBoardPage'>排行榜</text>
     </view>
   </view>
-  <view class="search-result-container">
-    <block wx:for="{{responseData}}" wx:for-item="music">
-      <text class="music-item">{{music.name}}</text>
-    </block>
+  <view class="line"></view>
+  <view class="recommend-container">
+    <view class="recommend-title">
+      <text>推荐歌单</text>
+      <image src="../../assets/icon/right-arrow.png" class="right-arrow"></image>
+    </view>
   </view>
 </view>
