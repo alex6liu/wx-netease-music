@@ -36,7 +36,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 2,
+			"current": 3,
 			"list": [
 				{
 					"id": -1,
@@ -53,7 +53,13 @@
 				{
 					"id": -1,
 					"name": "login",
-					"pathName": "pages/login/login"
+					"pathName": "pages/login/login",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "phoneLogin",
+					"pathName": "pages/phoneLogin/phoneLogin"
 				}
 			]
 		}

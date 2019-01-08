@@ -2,8 +2,8 @@
 <view class="login-container">
   <text class='title'>登录</text>
   <image src="../../assets/icon/company.png" class="company"></image>
-  <button>手机号登录</button>
-  <button>注册</button>
+  <button bindtap='bindPhoneLogin'>手机号登录</button>
+  <button bindtap='register'>注册</button>
   <view class="split-container">
     <view class='line'></view>
     <view class='split-text'>
