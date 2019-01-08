@@ -1,0 +1,21 @@
+/* components/header/header.wxss */
+.header {
+  display: flex;
+  background: #c20c0c;
+  align-items: center;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  background: #e8e8e8;
+  border-radius: 50rpx;
+  margin: 15rpx;
+  width: 80%;
+  padding: 0 10rpx;
+}
+
+.musiclist, .mic {
+  width: 50rpx;
+  height: 50rpx;
+}

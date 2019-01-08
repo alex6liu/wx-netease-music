@@ -8,31 +8,6 @@ Page({
     inputValue: '',
     responseData: {}
   },
-  bindFmPage() {
-    wx.navigateTo({
-      url: '../fm/fm'
-    })
-  },
-  bindRecommend() {
-    wx.navigateTo({
-      url: '../recommend/recommend'
-    })
-  },
-  bindPlaylist() {
-    wx.navigateTo({
-      url: '../songList/songList'
-    })
-  },
-  bindBoardPage() {
-    wx.navigateTo({
-      url: '../board/board'
-    })
-  },
-  bindSearchInput(e) {
-    this.setData({
-      inputValue: e.detail.value
-    })
-  },
   bindSearchButton() {
     var myThis = this;
     wx.request({

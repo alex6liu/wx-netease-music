@@ -1,0 +1,27 @@
+<!--components/choice/choice.wxml-->
+<view class="index-category">
+  <view class="category-container" bindtap='bindFmPage'>
+    <view class="image-container">
+      <image src="../../assets/icon/fm.png" class="fm"></image>
+    </view>
+    <text class="fm-text">私人FM</text>
+  </view>
+  <view class="category-container" bindtap='bindRecommend'>
+    <view class="image-container">
+      <image src="../../assets/icon/recommend.png" class="recommend"></image>
+    </view>
+    <text class="recommend-text">每日推荐</text>
+  </view>
+  <view class="category-container" bindtap='bindPlaylist'>
+    <view class="image-container">
+      <image src="../../assets/icon/playlist.png" class="playlist"></image>
+    </view>
+    <text class="playlist-text">歌单</text>
+  </view>
+  <view class="category-container" bindtap='bindBoardPage'>
+    <view class="image-container">
+      <image src="../../assets/icon/board.png" class="board"></image>
+    </view>
+    <text class="board-text">排行榜</text>
+  </view>
+</view>
