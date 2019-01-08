@@ -1,2 +1,4 @@
 <!--pages/account/account.wxml-->
-<text>pages/account/account.wxml</text>
+<view class="account-container">
+  <button bindtap='bindLogButton'>立即登陆</button>
+</view>

@@ -1,1 +1,14 @@
 /* pages/video/video.wxss */
+.recommend-video {
+  background: grey;
+}
+.single-video-container {
+  margin: 0 auto;
+  width: 95%;
+  overflow: hidden;
+  border-radius: 35rpx;
+  height: auto;
+}
+
+image {
+}

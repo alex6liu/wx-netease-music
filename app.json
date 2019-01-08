@@ -6,6 +6,7 @@
     "pages/songList/songList",
     "pages/board/board",
     "pages/logs/logs",
+    "pages/login/login",
     "pages/video/video",
     "pages/mine/mine",
     "pages/friends/friends",

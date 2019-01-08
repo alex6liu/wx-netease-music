@@ -1,2 +1,9 @@
 <!--pages/video/video.wxml-->
-<text>pages/video/video.wxml</text>
+<view class="video-container">
+  <search></search>
+  <view class="recommend-video">
+    <view wx:for="{{recommendList}}" class="single-video-container">
+      <image src="{{item.cover}}"></image>
+    </view>
+  </view>
+</view>
