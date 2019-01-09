@@ -1,6 +1,7 @@
 {
   "usingComponents": {
     "search": "../../components/search/search",
-    "choice": "../../components/choice/choice"
+    "choice": "../../components/choice/choice",
+    "recommendPlayList": "../../components/recommendPlayList/recommendPlayList"
   }
 }

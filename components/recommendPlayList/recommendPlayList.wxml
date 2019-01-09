@@ -1,0 +1,25 @@
+<!--components/recommendPlayList/recommendPlayList.wxml-->
+<view class="recommend-container">
+  <view class="recommend-title">
+    <text>推荐歌单</text>
+    <image src="../../assets/icon/right-arrow.png" class="right-arrow"></image>
+  </view>
+  <view class='songList-container upper'>
+    <block wx:for="{{playList}}">
+      <view wx:if="{{index<3}}" class="single-song-list">
+        <image src="{{item.coverImgUrl}}" class="song-list-cover"></image>
+        <text class='playCount'>{{item.playCount}}</text>
+        <text class="list-title">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+  <view class='songList-container upper'>
+    <block wx:for="{{playList}}">
+      <view wx:if="{{index>=3}}" class="single-song-list">
+        <image src="{{item.coverImgUrl}}" class="song-list-cover"></image>
+        <text class='playCount'>{{item.playCount}}</text>
+        <text class="list-title">{{item.name}}</text>
+      </view>
+    </block>
+  </view>
+</view>
