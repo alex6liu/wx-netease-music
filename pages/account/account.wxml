@@ -1,4 +1,38 @@
 <!--pages/account/account.wxml-->
 <view class="account-container">
-  <button bindtap='bindLogButton'>立即登陆</button>
+  <view wx:if="{{hasLogin}}">
+    <view class='userInfo-container'>
+      <view class='user-container'>
+        <image src="{{avatarUrl}}" class="avatar"></image>
+        <view class='userInfo'>
+          <text class='nickname'>{{nickname}}</text>
+          <text class='level'>Lv {{level}}</text>
+        </view>
+      </view>
+      <view class='line'></view>
+      <view class='activity-container'>
+        <view class='single'>
+          <text>动态</text>
+          <text>{{eventCount}}</text>
+        </view>
+        <view class="v-line"></view>
+        <view class='single'>
+          <text>关注</text>
+          <text>{{followeds}}</text>
+        </view>
+        <view class="v-line"></view>
+        <view class='single'>
+          <text>粉丝</text>
+          <text>{{follows}}</text>
+        </view>
+        <view class="v-line"></view>
+        <view class='single'>
+          <text>我的资料</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view wx:else>
+    <button bindtap='bindLogButton'>立即登陆</button>
+  </view>
 </view>

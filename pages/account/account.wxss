@@ -1,1 +1,54 @@
 /* pages/account/account.wxss */
+.account-container {
+
+}
+.userInfo-container {
+  
+}
+.user-container {
+  display: flex;
+  align-items: center;
+  padding: 20rpx;
+}
+.avatar {
+  border-radius: 50%;
+  width: 100rpx;
+  height: 100rpx;
+  margin-right: 20rpx;
+}
+.userInfo {
+  display: flex;
+  flex-direction: column;
+}
+.nickname {
+  font-size: 35rpx; 
+}
+.level {
+  border: 1rpx solid;
+  border-radius: 30rpx;
+  font-size: 15rpx;
+  padding: 5rpx;
+  width: 30rpx;
+  line-height: 18rpx;
+}
+.line {
+  width: 100%;
+  height: 1rpx;
+  background: #e8e8e8;
+  margin-bottom: 10rpx;
+}
+.activity-container {
+  display: flex;
+  justify-content: space-around;
+}
+.single {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 25rpx;
+}
+.v-line {
+  width: 3rpx;
+  height: 60rpx;
+  background: #e8e8e8;
+}

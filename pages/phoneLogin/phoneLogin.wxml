@@ -8,6 +8,6 @@
     <image src='../../assets/icon/password.png' class="icon"></image>
     <input password='true' placeholder='密码' bindinput='passwordInput'></input>
   </view>
-  <button form-type='formSubmit' disabled='{{disabled}}'>登录</button>
+  <button form-type='formSubmit' disabled='{{disabled}}' bindtap='phoneLogin'>登录</button>
   <text class="reset-password">重设密码</text>
 </view>

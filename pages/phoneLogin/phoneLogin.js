@@ -37,4 +37,20 @@ Page({
       })
     }
   },
+  phoneLogin() {
+    wx.request({
+      url: 'https://netease-music-api.herokuapp.com/login/cellphone',
+      method: 'POST',
+      data: {
+        phone: this.data.phoneNumber,
+        password: this.data.password
+      },
+      success: (res) => {
+        // console.log(res)
+        wx.setStorageSync('cookie', res.header["Set-Cookie"]);
+        wx.setStorageSync('userId', res.data.account.id);
+        // console.log(wx.getStorageSync('userId'))
+      }
+    })
+  },
 })
