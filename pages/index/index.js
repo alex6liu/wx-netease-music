@@ -6,24 +6,20 @@ var baseUrl = require('../../utils/baseUrl.js')
 Page({
   data: {
     inputValue: '',
-    responseData: {}
+    responseData: {},
+    songList: {},
   },
-  bindSearchButton() {
-    var myThis = this;
+  onLoad() {
     wx.request({
-      url: baseUrl,
-      data: {
-        keywords: this.data.inputValue
-      },
+      url: baseUrl + '/top/playlist?limit=6&order=hot',
       header: {
-        'content-type': 'application/json' // 默认值
+        'cookie': wx.getStorageSync('cookie'),
       },
-      success(res) {
-        myThis.setData({
-          responseData: res.data.result.songs
+      success: (res) => {
+        this.setData({
+          songList: res.data.playlists
         })
-        console.log(res.data)
-      }
+      },
     })
   }
 })

@@ -17,3 +17,32 @@
   width: 30rpx;
   height: 30rpx;
 }
+
+.songList-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.single-song-list {
+  display: flex;
+  flex-direction: column;
+  margin: 10rpx;
+  width: 30%;
+  position: relative;
+}
+
+.playCount {
+  position: absolute;
+  right: 0;
+  font-size: 25rpx;
+  color: white;
+}
+
+.song-list-cover {
+  width: 240rpx;
+  height: 240rpx;
+}
+
+.list-title {
+  font-size: 30rpx;
+}
