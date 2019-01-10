@@ -1,0 +1,68 @@
+/* components/play/play.wxss */
+.play-header{
+  display: flex;
+  justify-content: space-between;
+}
+.play-header-operation{
+  display: flex;
+  align-items: center;
+  padding: 10rpx;
+}
+.play-header-icon {
+  width: 50rpx;
+  height: 50rpx;
+  margin-right: 20rpx;
+}
+.play-text{
+  font-size: 35rpx;
+}
+.play-count{
+  font-size: 27rpx;
+}
+.play-header-save {
+  background: #c20c0c;
+  width: 150rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.save-text{
+  font-size: 25rpx;
+  color: white;
+}
+.songs-container{
+  padding-bottom: 5rpx;
+}
+.single-song-container{
+  display: flex;
+  align-items: center;
+}
+.song-index {
+  color: #e8e8e8;
+  margin: 0 20rpx;
+}
+.song-info-container{
+  padding: 10rpx 0;
+  border-top:1rpx solid #e8e8e8;
+  width: 650rpx;
+}
+.song-name {
+  font-size: 35rpx;
+  line-height: 35rpx;
+}
+.song-info{
+  margin: 0;
+  padding: 0;
+  line-height: 25rpx;
+}
+.song-singer {
+  font-size: 25rpx;
+}
+.song-operation {
+  display: flex;
+}
+.song-play-operation{
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 15rpx;
+}

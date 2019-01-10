@@ -1,66 +1,37 @@
 // pages/songList/songList.js
+var baseUrl = require('../../utils/baseUrl.js')
+var header = require('../../utils/header.js')
 Page({
 
-  /**
-   * 页面的初始数据
-   */
   data: {
-
+    songList: [],
+    coverImgUrl:'',
+    commentCount: 0,
+    name:'',
+    playCount: 0,
+    shareCount: 0,
+    creatorAvatar: '',
+    creatorNickname: '',
   },
 
-  /**
-   * 生命周期函数--监听页面加载
-   */
-  onLoad: function (options) {
-
+  onLoad: function (query) {
+    wx.request({
+      url: baseUrl + '/playlist/detail?id=' + query.id,
+      header: header,
+      success: (res) => {
+        this.setData({
+          songList:res.data.playlist.tracks,
+          coverImgUrl: res.data.playlist.coverImgUrl,
+          commentCount: res.data.playlist.commentCount,
+          name: res.data.playlist.name,
+          playCount: res.data.playlist.playCount,
+          shareCount: res.data.playlist.shareCount,
+          creatorAvatar: res.data.playlist.creator.avatarUrl,
+          creatorNickname: res.data.playlist.creator.nickname,
+        })
+        // console.log(this.data)
+      }
+    })
   },
 
-  /**
-   * 生命周期函数--监听页面初次渲染完成
-   */
-  onReady: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面显示
-   */
-  onShow: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面隐藏
-   */
-  onHide: function () {
-
-  },
-
-  /**
-   * 生命周期函数--监听页面卸载
-   */
-  onUnload: function () {
-
-  },
-
-  /**
-   * 页面相关事件处理函数--监听用户下拉动作
-   */
-  onPullDownRefresh: function () {
-
-  },
-
-  /**
-   * 页面上拉触底事件的处理函数
-   */
-  onReachBottom: function () {
-
-  },
-
-  /**
-   * 用户点击右上角分享
-   */
-  onShareAppMessage: function () {
-
-  }
 })

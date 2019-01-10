@@ -28,6 +28,15 @@ Component({
           })
         },
       })
+      console.log(this.data)
     },
   },
+  methods: {
+    playListTap(e) {
+      console.log(e)
+      wx.navigateTo({
+        url: '../songList/songList?id='+e.currentTarget.dataset.viewpointUuid,
+      })
+    }
+  }
 })

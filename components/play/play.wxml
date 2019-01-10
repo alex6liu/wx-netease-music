@@ -1,0 +1,28 @@
+<!--components/play/play.wxml-->
+<view class="play-container">
+  <view class="play-header">
+    <view class="play-header-operation">
+      <image class="play-header-icon" src="../../assets/icon/play.png"/>
+      <text class="play-text">播放全部</text>
+      <text class="play-count">(共{{songCount}}首)</text>
+    </view>
+    <view class="play-header-save">
+      <text class="save-text">+收藏({{saveCount}})</text>
+    </view>
+  </view>
+  <view class="songs-container" wx:for="{{songListToPlay}}">
+    <view class="single-song-container">
+      <text class="song-index">{{index + 1}}</text>
+      <view class="song-info-container">
+        <text class="song-name">{{item.name}}</text>
+        <view class="song-info">
+          <text class="song-singer">{{item.ar[0].name}} - {{item.al.name}}</text>
+        </view>
+      </view>
+      <view class="song-operation">
+        <image class="song-play-operation" src="../../assets/icon/video.png"/>
+        <image class="song-play-operation" src="../../assets/icon/dian.png"/>
+      </view>
+    </view>
+  </view>
+</view>

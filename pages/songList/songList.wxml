@@ -1,2 +1,37 @@
 <!--pages/songList/songList.wxml-->
-<text>pages/songList/songList.wxml</text>
+<view class="songlist-container">
+  <view class="songlist-info-container">
+    <view class="creator-info-container">
+      <view class="songlist-cover-container">
+        <image class="songlist-image" src="{{coverImgUrl}}"/>
+        <text class="songlist-playcount">{{playCount}}</text>
+      </view>
+      <view class="songlist-title-container">
+        <text class="songlist-title">{{name}}</text>
+        <view class="creator-info">
+          <image class="creator-avatar" src="{{creatorAvatar}}"/>
+          <text class="creator-name">{{creatorNickname}}</text>
+        </view>
+      </view>
+    </view>
+    <view class="songList-operation-container">
+      <view class="single-operation">
+        <image class="operation-icon" src="../../assets/icon/comment.png"/>
+        <text class="operation-text">{{commentCount}}</text>
+      </view>
+      <view class="single-operation">
+        <image class="operation-icon" src="../../assets/icon/share.png" />
+        <text class="operation-text">{{shareCount}}</text>
+      </view>
+      <view class="single-operation">
+        <image class="operation-icon" src="../../assets/icon/download.png" />
+        <text class="operation-text">下载</text>
+      </view>
+      <view class="single-operation">
+        <image class="operation-icon" src="../../assets/icon/choose.png" />
+        <text class="operation-text">多选</text>
+      </view>
+    </view>
+  </view>
+  <play songListToPlay="{{songList}}"></play>
+</view>
